@@ -1,0 +1,91 @@
+@import "variables";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.news {
+  &-list {
+    display: flex;
+  }
+
+  &-item {
+    margin: 10px;
+
+    &:hover {
+      background-color: $gray-color;
+    }
+
+    &__thumb {
+      width: 100%;
+    }
+
+    &__title {
+      font: {
+        size: 20px;
+        weight: 600;
+      }
+
+      &::before {
+        content: "";
+        border-left: 2px solid $red-color;
+      }
+    }
+
+    &__desc {
+      font: {
+        size: 16px;
+        style: italic;
+      }
+    }
+  }
+}
+
+.box {
+  &-01 {
+    width: 100px;
+    height: 200px;
+    background-color: yellow;
+  }
+
+  &-02 {
+    @include box-size(200px, 200px);
+    @include rounded(10px, 20px, 30px, 40px);
+    background-color: green;
+  }
+}
+
+.grid-layout {
+  .container {
+    @include grid(4, 10px);
+    margin-top: 15px;
+    .item {
+      background-color: orange;
+      text-align: center;
+      padding: 20px;
+    }
+  }
+
+  .list {
+    @include grid(4, 10px);
+    margin-top: 15px;
+    .list-item {
+      background-color: green;
+      text-align: center;
+      padding: 20px;
+    }
+  }
+
+  .news {
+    @include grid(4, 10px);
+    margin-top: 15px;
+    .new-item {
+      background-color: red;
+      text-align: center;
+      padding: 20px;
+    }
+  }
+}

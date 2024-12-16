@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", serif;
+  background-color: #e5e5e5;
+}
+
+.container {
+  margin: 30px auto;
+  max-width: 1200px;
+  max-height: auto;
+  background-color: #fff;
+}
+
+.dashboard__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: #000;
+}
+
+.dashboard__title {
+  color: #fff;
+}
+
+.dashboard__table {
+  margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  padding: 10px 10px;
+}
+
+.dashboard__table thead tr th {
+  text-align: left;
+  border-bottom: 1px solid #000;
+}
+
+.dashboard__table thead tr th:nth-child(1) {
+  width: 170px;
+}
+
+.dashboard__table thead tr th:nth-child(3),
+.dashboard__table thead tr th:nth-child(4) {
+  width: 80px;
+}
+
+.edit-btn,
+.delete-btn,
+.new-btn {
+  display: block;
+  border: 1px solid #000;
+  padding: 10px;
+  width: 100px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.new-btn {
+  color: #000;
+  background-color: #fff;
+}
+
+.edit-btn {
+  background-color: green;
+}
+
+.delete-btn {
+  background-color: red;
+}

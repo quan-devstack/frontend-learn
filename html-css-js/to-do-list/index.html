@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="todo">
+        <h1 class="todo__title">Todo List</h1>
+        <form class="todo__form">
+          <input type="text" placeholder="Enter todo" class="todo__form-ip" />
+          <button class="todo__form-btn" onclick="addTodo()">Add</button>
+        </form>
+        <div class="todo__main">
+          <form class="todo__filter">
+            <label for="filter">List: </label>
+            <select id="filter" onchange="filterTodo()">
+              <option value="all">All</option>
+              <option value="done">Done</option>
+              <option value="todo">Todo</option>
+            </select>
+          </form>
+          <div class="todo__list">
+            <ul></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- script -->
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM</title>
+  </head>
+  <body>
+    <div class="box">
+      <h1 id="title" class="title">Hello World</h1>
+      <!-- haha -->
+      <h1 id="title" class="title">Hi World</h1>
+      <h1 id="title" class="title">Yolo World</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse molestias
+        facilis numquam quibusdam est eos fugit suscipit officiis, corporis id
+        mollitia aliquam perspiciatis incidunt ratione inventore nisi alias iure
+        consequatur?
+      </p>
+    </div>
+  </body>
+  <script>
+    // query element
+    const box = document.querySelector(".box");
+    const title = document.querySelectorAll(".title");
+    title.forEach((el) => {
+      console.log(el);
+    });
+
+    // create a elemnt
+  </script>
+</html>

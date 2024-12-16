@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Content</title>
+  </head>
+  <body>
+    <div class="content">
+      <h1 class="title">
+        Hello <span style="display: none">Coding</span> World
+      </h1>
+    </div>
+  </body>
+  <script>
+    const content = document.querySelector(".content");
+    const title = document.querySelector(".title");
+
+    // get content
+    console.log(content.innerHTML);
+    console.log(content.innerText);
+    console.log(content.textContent);
+
+    // change content
+    content.innerHTML = "<p>This is a new element</p>";
+    title.innerText = "Goodbye World";
+  </script>
+</html>

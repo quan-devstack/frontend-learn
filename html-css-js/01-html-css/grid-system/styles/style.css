@@ -1,0 +1,17 @@
+@import "./grid.css";
+
+/* Reset CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.product {
+  margin-top: 20px;
+}
+
+.product .product-item {
+  color: #fff;
+  background-color: green;
+}
