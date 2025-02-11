@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form</title>
+  </head>
+  <body>
+    <form
+      action="/submit-form"
+      method="post"
+      enctype="multipart/form-data"
+      autocomplete="off"
+    >
+      <label for="username">Tên người dùng:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Nhập tên người dùng"
+        required
+      />
+
+      <label for="password">Mật khẩu:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Nhập mật khẩu"
+        required
+      /><br /><br />
+
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Nhập email"
+        required
+      /><br /><br />
+
+      <label for="gender">Giới tính:</label>
+      <input type="radio" id="male" name="gender" value="male" /> Nam
+      <input type="radio" id="female" name="gender" value="female" />
+      Nữ<br /><br />
+
+      <label for="country">Quốc gia:</label>
+      <select id="country" name="country">
+        <option value="vn">Việt Nam</option>
+        <option value="us">Hoa Kỳ</option></select
+      ><br /><br />
+
+      <label for="message">Tin nhắn:</label><br />
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        cols="50"
+        placeholder="Nhập tin nhắn của bạn"
+      ></textarea
+      ><br /><br />
+
+      <button type="submit">Send</button>
+      <button type="reset">Reset</button>
+    </form>
+
+    <!-- 
+      Các thuộc tính của <form>:
+          + action: URL xử lý dữ liệu của biểu mẫu
+          + method: Phương thức gửi biểu mẫu, như GET hoặc POST
+          + enctype: Xác định cách mã hóa dữ liệu trước khi gửi (dùng khi gửi file). 
+          + autocomplete: Bật hoặc tắt tính năng tự động điền dữ liệu của trình duyệt   
+      -->
+
+    <!--
+      Các phần tử nhập liệu chính: 
+          + label: Tạo nhãn dán cho input 
+          + input: Thẻ nhập liệu chính với nhiều loại khác nhau được xác định bởi thuộc tính type 
+          + textarea: Thẻ nhập liệu cho nhiều dòng văn bản (dùng để nhập đoạn văn dài).
+          + select & option: Tạo danh sách thả xuống (dropdown list)
+          + button: Tạo nút có thể chứa nhiều phần tử bên trong như văn bản, hình ảnh.    
+      -->
+
+    <!--
+      Các thuộc tính thẻ <input>:
+          + type: đại diện cho kiểu dữ liệu người dùng nhập
+          + name: đại diện cho tên trường dữ liệu. Ví dụ nếu name = username thì kết quả là username=”User A”
+          + placholder: đưa nội dung vào bên trong thẻ
+          + value: giá trị mặc định của thẻ
+      -->
+
+    <!-- 
+      Các giá trị (kiểu dữ liệu)  cho thuộc tính type
+          + type="text": Ô nhập văn bản
+          + type="password": Ô nhập mật khẩu (nội dung sẽ bị ẩn).
+          + type="email": Ô nhập email (trình duyệt sẽ kiểm tra định dạng email).
+          + type="radio": Nút chọn một (radio button)
+          + type="checkbox": Ô checkbox cho phép chọn nhiều tùy chọn.
+          + input="file": Cho phép người dùng chọn và tải lên tệp
+      -->
+  </body>
+</html>

@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Roboto, sans-serif;
+  color: #333;
+  line-height: 1.2;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 15px 0;
+}
+
+.header .header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .header-row .menu {
+  margin-left: auto;
+}
+
+.header .header-row .menu ul {
+  display: flex;
+}
+
+.header .header-row .menu ul li a {
+  display: block;
+  padding: 0 20px;
+  font-weight: 500;
+}
+
+.header .header-row .contact .btn {
+  display: block;
+  background: #75b7eb;
+  padding: 10px 30px;
+  border-radius: 99px;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.header .header-row .menu-toggle {
+  display: none;
+}
+
+.header .header-row .overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  inset: 0;
+  background: #0000006b;
+  transition: 0.4s ease;
+  transition-property: opacity, visibility;
+}
+
+/*
+Breakpoints
+>=992px => Desktop
+<992px và >=768px => Tablet
+<768px => Mobile
+*/
+
+@media screen and (max-width: 991px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .header .header-row .menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    min-width: 250px;
+    background: black;
+    translate: -100%;
+    transition: translate 0.4s ease;
+    z-index: 1;
+  }
+
+  .header .header-row .menu ul {
+    display: block;
+    padding: 20px 0;
+  }
+
+  .header .header-row .menu ul li a {
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .header .header-row .menu-toggle {
+    display: block;
+    font-size: 2.5rem;
+  }
+
+  .header .header-row .contact {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .header .header-row input[type="checkbox"]:checked ~ .menu {
+    translate: 0;
+  }
+
+  .header .header-row input[type="checkbox"]:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header .header-row .contact {
+    display: none;
+  }
+}

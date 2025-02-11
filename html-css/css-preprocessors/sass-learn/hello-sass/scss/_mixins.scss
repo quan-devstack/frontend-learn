@@ -1,0 +1,27 @@
+// mixin no params
+@mixin size {
+  width: 200px;
+  height: 200px;
+}
+
+// mixin has params
+@mixin box-size($width: 100px, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin rounded($tl, $tr: $tl, $bl: $tl, $br: $tl) {
+  border-radius: $tl $tr $bl $br;
+}
+
+@mixin grid($column, $spacing) {
+  display: flex;
+  row-gap: $spacing;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * $spacing);
+
+  > * {
+    width: calc(100% / $column - $spacing);
+    margin-left: $spacing;
+  }
+}

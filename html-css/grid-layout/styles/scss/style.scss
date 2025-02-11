@@ -1,0 +1,151 @@
+@import "reset";
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Sofia Sans", sans-serif;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper-inner {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "sidebar header header header header"
+    "sidebar main main main main"
+    "sidebar main main main main"
+    "sidebar main main main main"
+    "sidebar main main main main";
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding: 54px 0 0 58px;
+
+  .heading {
+    margin-top: 60px;
+    font-size: 3.2rem;
+    font-weight: 800;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-top: 48px;
+
+    .nav-ic {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  grid-area: header;
+  height: $header-height;
+
+  .search-form {
+    display: flex;
+    align-items: center;
+    column-gap: 18px;
+
+    .search {
+      font-size: 1.8rem;
+      font-weight: 600;
+      background-color: #fff;
+    }
+
+    &::placeholder {
+      color: rgba($color: #0000, $alpha: 0.2);
+    }
+  }
+
+  .nav {
+    display: flex;
+    column-gap: 46px;
+    margin-left: auto;
+
+    .nav-link {
+      position: relative;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 8px 0;
+      color: $text-color;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: $border-color;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    column-gap: 26px;
+    margin-left: 50px;
+  }
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-flow: dense;
+  gap: 22px;
+
+  .wide {
+    grid-column: span 2;
+  }
+
+  .tall {
+    grid-row: span 2;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+}
