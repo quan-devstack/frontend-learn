@@ -1,0 +1,50 @@
+/* sm screen (portrait) */
+@media (max-width: 575.98px) {
+  /*  */
+}
+
+/* sm screen */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  /*  */
+}
+
+/*md screen */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .hamburger-menu {
+    opacity: 1;
+  }
+
+  .nav-bar {
+    display: block;
+    height: 0;
+    opacity: 0;
+    transition: height 0.5s ease;
+  }
+
+  .nav-bar ul:nth-child(1) {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .nav-bar ul:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+  }
+
+  .hamburger-menu:has(input:checked) + .nav-bar {
+    height: 300px;
+    opacity: 1;
+  }
+}
+
+/* lg screen */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /*  */
+}
+
+/* xl screen */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  /*  */
+}

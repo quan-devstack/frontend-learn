@@ -1,0 +1,123 @@
+#header {
+  margin-top: 40px;
+}
+
+.header__layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.header__navlink {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-70);
+}
+
+.header__navlink:hover {
+  color: var(--pink-50);
+}
+
+.header__form .form__label {
+  position: relative;
+}
+
+.header__form .form__input {
+  padding: 15px 0;
+  padding-right: 50px;
+  padding-left: 40px;
+  border: 1px solid var(--gray-10);
+  border-radius: 5px;
+  width: 300px;
+  box-shadow: 1px 1px 10px 0px var(--gray-40);
+}
+
+.header__form .form__icon:nth-of-type(1) {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+}
+
+.header__form .form__icon:nth-of-type(2) {
+  position: absolute;
+  top: 5px;
+  right: -13px;
+  border-left: 2px solid var(--gray-40);
+  padding: 0 10px;
+}
+
+.header__form .form__icon:nth-of-type(2)::after {
+  content: "2";
+  position: relative;
+  top: -25px;
+  right: 6px;
+  border-radius: 50%;
+  padding: 5px 8px;
+  color: var(--gray-10);
+  background-color: var(--pink-70);
+  font-size: 0.7rem;
+}
+
+/* .hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--bar-gap);
+  position: absolute;
+  right: 0;
+  top: 10px;
+  bottom: 0;
+  padding: 5px;
+  max-width: max-content;
+  max-height: max-content;
+  border: 1px solid #eee;
+  opacity: 0;
+  z-index: 2;
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+}
+
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: #333;
+  transform-origin: left center;
+  cursor: pointer;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing);
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 3px calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 3px calc(var(--bar-height) / 2);
+} */
